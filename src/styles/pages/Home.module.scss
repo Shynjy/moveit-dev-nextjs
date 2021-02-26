@@ -17,4 +17,17 @@
         gap: 6.25rem;
         align-content: center;
     }
+
+    @media (max-width: 550px) {
+        section {
+            grid-template-columns: 1fr;
+
+            &:last-child {
+                &::after {
+                    content: "";
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
