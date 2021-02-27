@@ -11,6 +11,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 500;
 
     .container {
         background: $white;
@@ -21,7 +22,6 @@
         box-shadow: 0 0 60px rgba($color: #000000, $alpha: 0.5);
         text-align: center;
         position: relative;
-
 
         header {
             font-size: 8.75rem;

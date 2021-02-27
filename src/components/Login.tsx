@@ -1,9 +1,20 @@
-import { useContext } from 'react'
-import { LoginContext } from '../contexts/LoginContext'
-import style from '../styles/components/Login.module.scss'
+import { useContext, useState } from 'react';
+import { LoginContext } from '../contexts/LoginContext';
+import style from '../styles/components/Login.module.scss';
+
+
+import { useAuth } from '../contexts/auth'
+import firebaseClient from '../../firebaseClient';
+import firebase from 'firebase/app';
+import 'firebase/auth';
 
 export default function Login() {
+    firebaseClient();
+
     const { login } = useContext(LoginContext);
+
+    // const [email, setEmail] = useState('');
+    // const [pass, setPass] = useState('');
 
 
     return (
