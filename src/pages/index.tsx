@@ -6,12 +6,14 @@ import ExperienceBar from '../components/ExperienceBar'
 import Profile from '../components/Profile'
 import CompletedChallenges from '../components/CompletedChallenges'
 import Countdown from '../components/Countdown'
+import Login from '../components/Login';
 
 import ChallengeBox from '../components/ChallengeBox'
 
 import style from '../styles/pages/Home.module.scss'
 import CountdownProvider from '../contexts/CountdownContext'
 import ChallengesProvider from '../contexts/ChallengesContext';
+import LoginProvider from '../contexts/LoginContext';
 
 interface HomeProps {
   level: number;
@@ -27,6 +29,11 @@ export default function Home(props: HomeProps) {
     currentExperience={props.currentExperience}
     challengesCompleted={props.challengesCompleted}
     >
+      
+      <LoginProvider>
+        <Login />
+      </LoginProvider>
+
       <div className={style.container}>
         <Head>
           <title>Início | move.it</title>
